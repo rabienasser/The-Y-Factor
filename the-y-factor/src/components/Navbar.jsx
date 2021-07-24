@@ -27,9 +27,6 @@ const StyledNav = styled.nav`
     align-items: center;
     padding: 2.5rem 10rem;
     background: var(--light-color);
-    /* position: sticky;
-    top: 0;
-    z-index: 10; */
     a {
         color: var(--dark-grey);
         text-decoration: none;

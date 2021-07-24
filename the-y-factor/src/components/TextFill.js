@@ -62,7 +62,7 @@ function TextFill() {
 const IntroAnimSvg = styled.svg`
    width: 100%;
    height: 100%;
-   animation: fill 2s ease forwards 4.3s;
+   animation: fill 2s ease forwards 3.2s;
 
    path:nth-child(1) {
       stroke-dasharray: 548.3;

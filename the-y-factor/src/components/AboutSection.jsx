@@ -4,20 +4,21 @@ import styled from 'styled-components'
 import {Button, Hide} from '../styles'
 // imgs
 import person from '../imgs/person.jpg'
-// IntroAnim
-import IntroAnim from '../components/IntroAnim'
+// animations
+import {motion} from 'framer-motion'
+import {titleAnim, fade, photoAnim} from '../animation'
 
 function AboutSection() {
     return (
         <About>
             <Description>
-                <h1><span>Take Your Fitness</span><br/>To The Next Level</h1>
-                <p>premium online & individual personal<br/> training in the Cleveland area</p>
-                <Button>Start Here</Button>
-                <Button>Contact</Button>
+                <motion.h1 variants={titleAnim}><span>Take Your Fitness<br/></span>To The Next Level</motion.h1>
+                <motion.p variants={fade}>Premium online & individual personal<br/> training in the Cleveland area</motion.p>
+                <Button variants={fade}>Start Here</Button>
+                <Button variants={fade}>Contact</Button>
             </Description>
             <Image>
-                <img src={person} alt="Photo" />
+                <motion.img variants={photoAnim} src={person} alt="Photo" />
             </Image>
         </About>
     )
@@ -36,6 +37,11 @@ const Description = styled.div`
     color: var(--light-color);
     h1 {
         font-size: 3.5rem;
+        font-weight: lighter;
+    }
+
+    span {
+        color: var(--third-color);
     }
 `
 
@@ -45,18 +51,17 @@ const Image = styled.div`
     display: flex;
     bottom: -20%;
     right: 15%;
-    background: red;
     height: 100%;
     @media(max-width: 1400px){
         bottom: -20%;
         right: 10%;
+        width: 30%;
     }
     
     img {
         height: 100%;
         width: 100%;
         margin: auto;
-        box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     }
 `
 
