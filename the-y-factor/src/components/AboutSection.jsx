@@ -2,6 +2,7 @@ import React from 'react'
 // styled
 import styled from 'styled-components'
 import {Button, Hide} from '../styles'
+import Wave from '../components/Wave'
 // imgs
 import person from '../imgs/person.jpg'
 // animations
@@ -11,6 +12,7 @@ import {titleAnim, fade, photoAnim} from '../animation'
 function AboutSection() {
     return (
         <About>
+            <Wave />
             <Description>
                 <motion.h1 variants={titleAnim}><span>Take Your Fitness<br/></span>To The Next Level</motion.h1>
                 <motion.p variants={fade}>Premium online & individual personal<br/> training in the Cleveland area</motion.p>
