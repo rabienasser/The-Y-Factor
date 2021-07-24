@@ -1,0 +1,38 @@
+:root {
+   --dark-blue: #2650a6;
+   --dark-grey: #696969;
+   --light-grey: #7c818f;
+   --third-color: #7fb7d4;
+   --light-color: #fbf9fa;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: var(--light-color);
+   color: var(--dark-grey);
+   overflow-x: hidden;
+   font-family: "Mulish", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+   padding: 2rem 0;
+}
+
+p {
+   font-size: 1.2rem;
+   font-weight: lighter;
+   margin-bottom: 1rem;
+}
+
+button {
+   margin: 1rem 2rem 0 0;
+}
