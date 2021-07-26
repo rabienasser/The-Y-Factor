@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Contact() {
+function Mission() {
     return (
         <div>
-            <h1>Contact Page</h1>
+            <h1>Mission Page</h1>
         </div>
     )
 }
 
-export default Contact
+export default Mission

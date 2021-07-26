@@ -8,6 +8,8 @@ import person from '../imgs/person.jpg'
 // animations
 import {motion} from 'framer-motion'
 import {titleAnim, fade, photoAnim} from '../animation'
+// React Router Dom
+import {Link} from 'react-router-dom'
 
 function AboutSection() {
     return (
@@ -17,7 +19,7 @@ function AboutSection() {
                 <motion.h1 variants={titleAnim}><span>Take Your Fitness<br/></span>To The Next Level</motion.h1>
                 <motion.p variants={fade}>Premium online & individual personal<br/> training in the Cleveland area</motion.p>
                 <Button variants={fade}>Start Here</Button>
-                <Button variants={fade}>Contact</Button>
+                <Link to='/contact'><Button variants={fade}>Contact</Button></Link>
             </Description>
             <Image>
                 <motion.img variants={photoAnim} src={person} alt="Photo" />

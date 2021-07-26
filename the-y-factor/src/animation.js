@@ -53,14 +53,14 @@ export const titleAnim = {
 export const fade = {
    hidden: {
       opacity: 0,
-      scale: 1.3,
+      //   scale: 1.2,
    },
    show: {
-      scale: 1,
+      //   scale: 1,
       opacity: 1,
       transition: {
          ease: "easeOut",
-         duration: 1,
+         duration: 1.5,
          delay: 4.5,
       },
    },

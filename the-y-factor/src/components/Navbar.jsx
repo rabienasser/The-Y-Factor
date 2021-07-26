@@ -11,9 +11,9 @@ function Navbar() {
         <StyledNav>
                 <img className="logo" src={logo} alt="" />
             <ul>
-                <li className='list-item'>Home</li>
-                <li className='list-item'>Mission</li>
-                <li className='list-item'>Contact</li>
+                <li><Link className='list-item' to='/'>Home</Link></li>
+                <li><Link className='list-item' to='/mission'>Mission</Link></li>
+                <li><Link className='list-item' to='/contact'>Contact</Link></li>
             </ul>
         </StyledNav>
     )
