@@ -21,6 +21,19 @@ export const pageAnimation = {
    },
 };
 
+export const colorSlider = {
+   hidden: {
+      x: "-100%",
+   },
+   show: {
+      x: "100%",
+      transition: {
+         ease: "easeOut",
+         duration: 1,
+      },
+   },
+};
+
 export const homePageAnim = {
    initial: {
       opacity: 1,
@@ -62,6 +75,19 @@ export const fade = {
          ease: "easeOut",
          duration: 1.5,
          delay: 4.5,
+      },
+   },
+};
+
+export const colorFade = {
+   hidden: {
+      opacity: 0,
+   },
+   show: {
+      opacity: 1,
+      transition: {
+         ease: "easeOut",
+         duration: 1.5,
       },
    },
 };
