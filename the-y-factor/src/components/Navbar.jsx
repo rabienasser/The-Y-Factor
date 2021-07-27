@@ -5,10 +5,12 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 // Logo
 import logo from '../imgs/logo.png'
+import {motion} from 'framer-motion'
+import {navFade} from '../animation'
 
 function Navbar() {
     return (
-        <StyledNav>
+        <StyledNav variants={navFade} initial='hidden' animate='show'> 
                 <img className="logo" src={logo} alt="" />
             <ul>
                 <li><Link className='list-item' to='/'>Home</Link></li>
@@ -19,7 +21,7 @@ function Navbar() {
     )
 }
 
-const StyledNav = styled.nav`
+const StyledNav = styled(motion.nav)`
     min-height: 10vh;
     display: flex;
     margin: auto;

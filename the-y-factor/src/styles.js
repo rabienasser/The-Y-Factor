@@ -57,6 +57,28 @@ export const Button = styled(motion.button)`
    }
 `;
 
+export const Frame = styled(motion.div)`
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100vh;
+   background: var(--third-color);
+   z-index: 2;
+`;
+
+export const Frame2 = styled(Frame)`
+   background: var(--light-grey);
+`;
+
+export const Frame3 = styled(Frame)`
+   background: var(--dark-blue);
+`;
+
+export const Frame4 = styled(Frame)`
+   background: var(--dark-grey);
+`;
+
 export const Hide = styled.div`
    overflow: hidden;
 `;

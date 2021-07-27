@@ -14,9 +14,9 @@ export const pageAnimation = {
    },
    exit: {
       opacity: 0,
-      y: 500,
+      y: 200,
       transition: {
-         duration: 0.8,
+         duration: 0.5,
       },
    },
 };
@@ -66,10 +66,8 @@ export const titleAnim = {
 export const fade = {
    hidden: {
       opacity: 0,
-      //   scale: 1.2,
    },
    show: {
-      //   scale: 1,
       opacity: 1,
       transition: {
          ease: "easeOut",
@@ -88,6 +86,21 @@ export const colorFade = {
       transition: {
          ease: "easeOut",
          duration: 1.5,
+         delay: 1,
+      },
+   },
+};
+
+export const navFade = {
+   hidden: {
+      opacity: 0,
+   },
+   show: {
+      opacity: 1,
+      transition: {
+         ease: "easeOut",
+         duration: 1.5,
+         delay: 1.7,
       },
    },
 };
