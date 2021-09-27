@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 import TextFill from "../components/TextFill";
+import { motion } from "framer-motion";
 import { homePageAnim } from "../animation";
 
 function IntroAnim() {

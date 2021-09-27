@@ -1,13 +1,7 @@
 import "./App.css";
-// React-Router
 import { Switch, Route, useLocation } from "react-router-dom";
-// Components
-import Navbar from "./components/Navbar";
-// Pages
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import Mission from "./pages/Mission";
-// Animation
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
@@ -18,17 +12,7 @@ function App() {
          <AnimatePresence exitBeforeEnter>
             <Navbar />
             <Switch location={location} key={location.pathname}>
-               <Route path="/" exact>
-                  <Home />
-               </Route>
-
-               <Route path="/mission">
-                  <Mission />
-               </Route>
-
-               <Route path="/contact">
-                  <Contact />
-               </Route>
+               <Route path="/" exact component={Home} />
             </Switch>
          </AnimatePresence>
       </div>
