@@ -12,11 +12,24 @@ export const StyledBox = styled.div`
       rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
       rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
+   @media (max-width: 875px) {
+      width: 50%;
+      margin: 1.5rem 0;
+   }
+   @media (max-width: 680px) {
+      width: 80%;
+   }
+
    .icon {
       height: 65px;
       width: 65px;
       margin-bottom: 20px;
       color: var(--third-color);
+
+      @media (max-width: 1100px) {
+         height: 50px;
+         width: 50px;
+      }
    }
 
    h4 {

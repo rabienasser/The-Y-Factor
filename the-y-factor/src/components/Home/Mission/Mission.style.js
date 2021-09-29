@@ -2,17 +2,28 @@ import styled from "styled-components";
 
 export const Container = styled.div`
    padding: 0 10rem;
-   height: 70vh;
-   margin-bottom: 7rem;
+   margin-bottom: 4rem;
    display: flex;
    background: var(--dark-blue);
    color: var(--light-color);
+
+   @media (max-width: 1100px) {
+      padding: 0 1rem;
+   }
+   @media (max-width: 550px) {
+      margin-bottom: 1rem;
+   }
 `;
 
 export const MissionContent = styled.div`
    display: flex;
    align-items: center;
    padding: 40px;
+
+   @media (max-width: 750px) {
+      flex-direction: column;
+      padding: 20px;
+   }
 `;
 
 export const Image = styled.div`
@@ -21,6 +32,9 @@ export const Image = styled.div`
    display: flex;
    align-items: center;
    justify-content: center;
+   @media (max-width: 750px) {
+      width: 70%;
+   }
 
    img {
       object-fit: cover;
@@ -35,11 +49,19 @@ export const Statement = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
+   @media (max-width: 750px) {
+      width: 100%;
+      text-align: center;
+   }
 
    h2 {
       margin-bottom: 1rem;
       font-size: 2.7rem;
       color: var(--third-color);
+
+      @media (max-width: 1150px) {
+         font-size: 2rem;
+      }
    }
 
    p {

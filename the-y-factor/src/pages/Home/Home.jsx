@@ -6,7 +6,6 @@ import WhatWeDo from "../../components/Home/WhatWeDo/WhatWeDo";
 import Testimonials from "../../components/Home/Testimonials/Testimonials";
 import Mission from "../../components/Home/Mission/Mission";
 import Contact from "../../components/Home/Contact/Contact";
-import { pageAnimation } from "../../animation";
 
 const Home = () => {
    return (

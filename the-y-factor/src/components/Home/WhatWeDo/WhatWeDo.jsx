@@ -8,15 +8,15 @@ const WhatWeDo = () => {
       <>
          <Description>
             <div>
-               <h2>What We Do</h2>
+               <h2>What I Do</h2>
                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quibusdam pariatur ipsum perferendis consequuntur nihil, animi
-                  reprehenderit officiis? Corrupti totam aperiam natus? Pariatur
-                  veniam delectus quisquam reprehenderit illo consequuntur nemo
-                  facilis adipisci modi impedit. Officiis cum quae, voluptatem
-                  nobis, dolor in quaerat aliquam molestiae, velit harum commodi
-                  totam rerum praesentium eveniet?
+                  My coaching options have been designed from the ground up to
+                  put you and your goals first. From one-on-one training in my
+                  private studio, to the various online classes and training
+                  sessions I'll host, to customized nutrition packages-
+                  everything I offer has been battle-tested for a decade in the
+                  field to ensure the results you achieve are not only
+                  impressive in the short term- but also sustainable for life
                </p>
             </div>
          </Description>

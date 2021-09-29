@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
-import { StyledForm } from "./ContactForm.style";
+import { Button } from "../../styles";
+import { StyledForm, Section, Name } from "./ContactForm.style";
 
 const ContactForm = () => {
-   const [name, setName] = useState("");
+   const [first, setFirst] = useState("");
+   const [last, setLast] = useState("");
+   const [number, setNumber] = useState("");
    const [email, setEmail] = useState("");
    const [message, setMessage] = useState("");
    const [emailSent, setEmailSent] = useState(false);
+   const [error, setError] = useState(false);
 
    const isValidEmail = (email) => {
       const regex =
@@ -14,15 +18,17 @@ const ContactForm = () => {
       return regex.test(String(email).toLowerCase());
    };
 
-   const submit = () => {
+   const submit = (e) => {
       isValidEmail(email);
 
-      if (name && email && message) {
+      if (first && last && number && email && message) {
          const serviceId = "service_nqexvun";
          const templateId = "template_awi0uin";
          const userId = "user_hxm9LVmlOrq85ProZYEwO";
          const templateParams = {
-            name,
+            first,
+            last,
+            number,
             email,
             message,
          };
@@ -32,40 +38,81 @@ const ContactForm = () => {
             .then((response) => console.log(response))
             .then((error) => console.log(error));
 
-         setName("");
+         setFirst("");
+         setLast("");
+         setNumber("");
          setEmail("");
          setMessage("");
          setEmailSent(true);
+         setError(false);
       } else if (!isValidEmail) {
-         alert("Please enter a valid email address.");
+         setError(true);
       } else {
-         alert("Please fill in all fields.");
+         setError(true);
       }
+
+      e.preventDefault();
    };
+
+   useEffect(() => {
+      setTimeout(() => {
+         setError(false);
+      }, 8000);
+   }, [error]);
 
    return (
       <StyledForm>
-         <input
-            type="text"
-            placeholder="Your Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-         />
-         <input
-            type="email"
-            placeholder="Your email address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-         />
-         <textarea
-            placeholder="Your message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-         ></textarea>
-         <button onClick={submit}>Send Message</button>
-         <span className={emailSent ? "visible" : null}>
-            Thank you for your message, we will be in touch in no time!
-         </span>
+         <Section>
+            <label htmlFor="name">Name</label>
+            <Name>
+               <input
+                  type="text"
+                  placeholder="First"
+                  value={first}
+                  onChange={(e) => setFirst(e.target.value)}
+               />
+               <input
+                  type="text"
+                  placeholder="Last"
+                  value={last}
+                  onChange={(e) => setLast(e.target.value)}
+               />
+            </Name>
+         </Section>
+         <Section>
+            <label htmlFor="number">Phone Number</label>
+            <input
+               type="text"
+               value={number}
+               onChange={(e) => setNumber(e.target.value)}
+            />
+         </Section>
+         <Section>
+            <label htmlFor="email">Email</label>
+            <input
+               type="email"
+               value={email}
+               onChange={(e) => setEmail(e.target.value)}
+            />
+         </Section>
+         <Section>
+            <label htmlFor="message">Message</label>
+            <textarea
+               value={message}
+               onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+         </Section>
+         <Button onClick={submit} grey>
+            Submit
+         </Button>
+         {emailSent && (
+            <span>
+               Thank you for your message, I will be in touch in no time!
+            </span>
+         )}
+         {error && (
+            <span className="error">Please enter all required fields</span>
+         )}
       </StyledForm>
    );
 };

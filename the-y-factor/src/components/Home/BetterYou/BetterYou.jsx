@@ -23,7 +23,6 @@ const BetterYou = () => {
                   strength, lose weight if needed and create a quality of life
                   you can enjoy.
                </p>
-               {/* <p>It is of utmost importance that we ensure you get a return on your investment and achieve the results that we gaurantee to deliver. Everyone wants to feel comfortable in their own skin, therefore, even if you are working a busy schedule, finding it hard to meet your fitness goals or would like to get fit, RCotterill PT gives you the flexibility to reach your full potential with a variety of different online and individual personal training plans.</p> */}
             </Description>
          </Container>
          <Boxes>

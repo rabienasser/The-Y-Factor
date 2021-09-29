@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 export const Button = styled(motion.button)`
    position: relative;
    padding: 10px 30px;
-   color: var(--third-color);
+   color: ${(props) =>
+      props.grey ? "var(--dark-grey)" : "var(--third-color)"};
    text-decoration: none;
    text-transform: uppercase;
    letter-spacing: 2px;
@@ -15,10 +16,17 @@ export const Button = styled(motion.button)`
    border: none;
    overflow: hidden;
 
+   @media (max-width: 850px) {
+      padding: 10px 15px;
+      font-size: 0.8rem;
+   }
+
    &:hover {
-      background: var(--third-color);
+      background: ${(props) =>
+         props.grey ? "var(--dark-grey)" : "var(--third-color)"};
       color: var(--light-color);
-      box-shadow: 0 0 50px var(--third-color);
+      box-shadow: 0 0 50px
+         ${(props) => (props.grey ? "var(--dark-grey)" : "var(--third-color)")};
       transition-delay: 0.5s;
    }
 
@@ -29,8 +37,10 @@ export const Button = styled(motion.button)`
       left: 0;
       width: 10px;
       height: 10px;
-      border-top: 2px solid var(--third-color);
-      border-left: 2px solid var(--third-color);
+      border-top: 2px solid
+         ${(props) => (props.grey ? "var(--dark-grey)" : "var(--third-color)")};
+      border-left: 2px solid
+         ${(props) => (props.grey ? "var(--dark-grey)" : "var(--third-color)")};
       transition: 0.5s;
    }
 
@@ -46,8 +56,10 @@ export const Button = styled(motion.button)`
       right: 0;
       width: 10px;
       height: 10px;
-      border-bottom: 2px solid var(--third-color);
-      border-right: 2px solid var(--third-color);
+      border-bottom: 2px solid
+         ${(props) => (props.grey ? "var(--dark-grey)" : "var(--third-color)")};
+      border-right: 2px solid
+         ${(props) => (props.grey ? "var(--dark-grey)" : "var(--third-color)")};
       transition: 0.5s;
    }
 
@@ -55,28 +67,6 @@ export const Button = styled(motion.button)`
       width: 100%;
       height: 100%;
    }
-`;
-
-export const Frame = styled(motion.div)`
-   position: fixed;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100vh;
-   background: var(--third-color);
-   z-index: 2;
-`;
-
-export const Frame2 = styled(Frame)`
-   background: var(--light-grey);
-`;
-
-export const Frame3 = styled(Frame)`
-   background: var(--dark-blue);
-`;
-
-export const Frame4 = styled(Frame)`
-   background: var(--dark-grey);
 `;
 
 export const Hide = styled.div`

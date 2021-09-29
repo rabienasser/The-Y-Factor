@@ -21,19 +21,6 @@ export const pageAnimation = {
    },
 };
 
-export const colorSlider = {
-   hidden: {
-      x: "-100%",
-   },
-   show: {
-      x: "100%",
-      transition: {
-         ease: "easeOut",
-         duration: 1,
-      },
-   },
-};
-
 export const homePageAnim = {
    initial: {
       opacity: 1,
