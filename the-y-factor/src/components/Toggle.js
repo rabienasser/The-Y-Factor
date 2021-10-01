@@ -24,11 +24,12 @@ const Section = styled(motion.div)`
 const Title = styled(motion.h2)`
    cursor: pointer;
    margin-bottom: 2rem;
-   transition: all 0.5s ease;
+   transition: all 0.3s ease;
+   padding: 0 0.75rem;
 
    &:hover {
       color: var(--third-color);
-      font-size: 1.7rem;
+      transform: scale(1.01);
    }
 `;
 

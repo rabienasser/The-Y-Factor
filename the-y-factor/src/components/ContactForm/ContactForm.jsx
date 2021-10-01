@@ -11,6 +11,7 @@ const ContactForm = () => {
    const [message, setMessage] = useState("");
    const [emailSent, setEmailSent] = useState(false);
    const [error, setError] = useState(false);
+   const [firstError, setFirstError] = useState(false);
 
    const isValidEmail = (email) => {
       const regex =
@@ -18,10 +19,10 @@ const ContactForm = () => {
       return regex.test(String(email).toLowerCase());
    };
 
-   const submit = (e) => {
+   const handleSubmit = (e) => {
       isValidEmail(email);
 
-      if (first && last && number && email && message) {
+      if (first && last && email && message && number) {
          const serviceId = "service_nqexvun";
          const templateId = "template_awi0uin";
          const userId = "user_hxm9LVmlOrq85ProZYEwO";
@@ -44,9 +45,6 @@ const ContactForm = () => {
          setEmail("");
          setMessage("");
          setEmailSent(true);
-         setError(false);
-      } else if (!isValidEmail) {
-         setError(true);
       } else {
          setError(true);
       }
@@ -60,8 +58,22 @@ const ContactForm = () => {
       }, 8000);
    }, [error]);
 
+   // const Test = ({ type, placeholder, value, onChange, error, errorMsg, state }) => {
+   //    return (
+   //       <div>
+   //          <input
+   //             type={type}
+   //             placehodler={placeholder}
+   //             value={value}
+   //             onChange={onChange}
+   //          />
+   //          {(error && state === '') && <p>{errorMsg}</p>}
+   //       </div>
+   //    );
+   // };
+
    return (
-      <StyledForm>
+      <StyledForm onSubmit={handleSubmit}>
          <Section>
             <label htmlFor="name">Name</label>
             <Name>
@@ -70,19 +82,21 @@ const ContactForm = () => {
                   placeholder="First"
                   value={first}
                   onChange={(e) => setFirst(e.target.value)}
+                  required
                />
                <input
                   type="text"
                   placeholder="Last"
                   value={last}
                   onChange={(e) => setLast(e.target.value)}
+                  required
                />
             </Name>
          </Section>
          <Section>
             <label htmlFor="number">Phone Number</label>
             <input
-               type="text"
+               type="tel"
                value={number}
                onChange={(e) => setNumber(e.target.value)}
             />
@@ -93,6 +107,7 @@ const ContactForm = () => {
                type="email"
                value={email}
                onChange={(e) => setEmail(e.target.value)}
+               required
             />
          </Section>
          <Section>
@@ -100,9 +115,10 @@ const ContactForm = () => {
             <textarea
                value={message}
                onChange={(e) => setMessage(e.target.value)}
+               required
             ></textarea>
          </Section>
-         <Button onClick={submit} grey>
+         <Button type="submit" grey>
             Submit
          </Button>
          {emailSent && (
@@ -110,9 +126,7 @@ const ContactForm = () => {
                Thank you for your message, I will be in touch in no time!
             </span>
          )}
-         {error && (
-            <span className="error">Please enter all required fields</span>
-         )}
+         {error && <span>error</span>}
       </StyledForm>
    );
 };

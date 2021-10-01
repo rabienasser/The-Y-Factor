@@ -1,20 +1,13 @@
 import "./App.css";
-import { Switch, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
-import { AnimatePresence } from "framer-motion";
 
 function App() {
-   const location = useLocation();
-
+   window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+   };
    return (
       <div className="App">
-         <AnimatePresence exitBeforeEnter>
-            <Navbar />
-            <Switch location={location} key={location.pathname}>
-               <Route path="/" exact component={Home} />
-            </Switch>
-         </AnimatePresence>
+         <Home />
       </div>
    );
 }

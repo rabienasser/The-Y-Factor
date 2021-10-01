@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
    padding: 0 10rem;
    margin-bottom: 7rem;
 
@@ -14,7 +15,7 @@ export const Container = styled.div`
    }
 `;
 
-export const Description = styled.div`
+export const Description = styled(motion.div)`
    display: flex;
    flex-direction: column;
    align-items: center;

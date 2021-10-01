@@ -7,14 +7,14 @@ export const StyledNav = styled(motion.nav)`
    margin: auto;
    justify-content: space-between;
    align-items: center;
-   padding: 2.5rem 10rem;
+   padding: 1rem 13rem;
    background: var(--light-color);
 
    @media (max-width: 1100px) {
-      padding: 2rem 6rem;
+      padding: 1rem 6rem;
    }
    @media (max-width: 850px) {
-      padding: 2rem 3rem;
+      padding: 1rem 3rem;
    }
 
    @media (max-width: 680px) {
@@ -24,6 +24,39 @@ export const StyledNav = styled(motion.nav)`
    a {
       color: var(--dark-grey);
       text-decoration: none;
+      font-size: 1.1rem;
+      position: relative;
+      cursor: pointer;
+      transition: color 0.2 ease;
+
+      &:hover {
+         color: var(--light-grey);
+
+         &::after,
+         &::before {
+            width: 100%;
+            left: 0;
+         }
+      }
+      &::after,
+      &::before {
+         content: "";
+         position: absolute;
+         bottom: -30%;
+         width: 0;
+         right: 0;
+         height: 3px;
+      }
+
+      &::before {
+         transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+         background: var(--dark-blue);
+      }
+
+      &::after {
+         transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+         background: var(--third-color);
+      }
    }
    ul {
       display: flex;
@@ -33,9 +66,8 @@ export const StyledNav = styled(motion.nav)`
    }
    li {
       list-style: none;
-      padding-left: 10rem;
+      padding: 0 3rem;
       position: relative;
-      color: var(--dark-grey);
 
       @media (max-width: 1100px) {
          padding-left: 5rem;

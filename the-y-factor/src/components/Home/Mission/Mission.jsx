@@ -1,15 +1,36 @@
 import React from "react";
 import person from "../../../imgs/person.jpg";
-import { Container, MissionContent, Image, Statement } from "./Mission.style";
+import { useScroll } from "../../UseScroll";
+import { missionPhoto, missionFade } from "../../../animation";
+import {
+   Container,
+   MissionContent,
+   Image,
+   Statement,
+   StyledImage,
+} from "./Mission.style";
 
 const Mission = () => {
+   const [element, controls] = useScroll();
    return (
-      <Container>
+      <Container id="mission">
          <MissionContent>
             <Image>
-               <img src={person} alt="Jeff" />
+               <StyledImage
+                  src={person}
+                  alt="Jeff"
+                  variants={missionPhoto}
+                  animate={controls}
+                  initial="hidden"
+                  ref={element}
+               />
             </Image>
-            <Statement>
+            <Statement
+               variants={missionFade}
+               animate={controls}
+               initial="hidden"
+               ref={element}
+            >
                <h2>My Mission</h2>
                <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.

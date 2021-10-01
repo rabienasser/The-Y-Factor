@@ -62,52 +62,52 @@ function TextFill() {
 const IntroAnimSvg = styled.svg`
    width: 100%;
    height: 100%;
-   animation: fill 1s ease forwards 3.2s;
+   animation: fill 1s ease forwards 2s;
 
    path:nth-child(1) {
       stroke-dasharray: 548.3;
       stroke-dashoffset: 548.3;
-      animation: line-anim 1s ease forwards 0.3s;
+      animation: line-anim 1s ease forwards 0.2s;
    }
    path:nth-child(2) {
       stroke-dasharray: 859.02;
       stroke-dashoffset: 859.02;
-      animation: line-anim 1s ease forwards 0.6s;
+      animation: line-anim 1s ease forwards 0.4s;
    }
    path:nth-child(3) {
       stroke-dasharray: 494.55;
       stroke-dashoffset: 494.55;
-      animation: line-anim 1s ease forwards 0.9s;
+      animation: line-anim 1s ease forwards 0.6s;
    }
    path:nth-child(4) {
       stroke-dasharray: 1467.45;
       stroke-dashoffset: 1467.45;
-      animation: line-anim 1s ease forwards 1.2s;
+      animation: line-anim 1s ease forwards 0.8s;
    }
    path:nth-child(5) {
       stroke-dasharray: 705;
       stroke-dashoffset: 705;
-      animation: line-anim 1s ease forwards 1.5s;
+      animation: line-anim 1s ease forwards 1s;
    }
    path:nth-child(6) {
       stroke-dasharray: 553;
       stroke-dashoffset: 553;
-      animation: line-anim 1s ease forwards 1.8s;
+      animation: line-anim 1s ease forwards 1.2s;
    }
    path:nth-child(7) {
       stroke-dasharray: 408;
       stroke-dashoffset: 408;
-      animation: line-anim 1s ease forwards 2.1s;
+      animation: line-anim 1s ease forwards 1.4s;
    }
    path:nth-child(8) {
       stroke-dasharray: 500;
       stroke-dashoffset: 500;
-      animation: line-anim 1s ease forwards 2.4s;
+      animation: line-anim 1s ease forwards 1.6s;
    }
    path:nth-child(9) {
       stroke-dasharray: 803;
       stroke-dashoffset: 823;
-      animation: line-anim 1s ease forwards 2.7s;
+      animation: line-anim 1s ease forwards 1.8s;
    }
 
    @keyframes line-anim {

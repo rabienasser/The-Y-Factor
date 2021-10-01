@@ -1,12 +1,16 @@
 import React from "react";
 import Toggle from "../../Toggle";
+import { useScroll } from "../../UseScroll";
+import { scrollReveal } from "../../../animation";
 import { AnimateSharedLayout } from "framer-motion";
-import { Container, Description } from "./WhatWeDo.style";
+import { Container, Description } from "./Services.style";
 
-const WhatWeDo = () => {
+const Services = () => {
+   const [element, controls] = useScroll();
+
    return (
       <>
-         <Description>
+         <Description id="services">
             <div>
                <h2>What I Do</h2>
                <p>
@@ -20,7 +24,12 @@ const WhatWeDo = () => {
                </p>
             </div>
          </Description>
-         <Container>
+         <Container
+            variants={scrollReveal}
+            animate={controls}
+            initial="hidden"
+            ref={element}
+         >
             <div>
                <AnimateSharedLayout>
                   <Toggle title="1-on-1 Personal Training">
@@ -63,4 +72,4 @@ const WhatWeDo = () => {
    );
 };
 
-export default WhatWeDo;
+export default Services;

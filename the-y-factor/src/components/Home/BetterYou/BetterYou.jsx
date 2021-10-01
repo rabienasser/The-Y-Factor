@@ -1,5 +1,7 @@
 import React from "react";
 import Box from "../../Box/Box";
+import { useScroll } from "../../UseScroll";
+import { scrollReveal } from "../../../animation";
 import {
    faRunning,
    faDumbbell,
@@ -8,9 +10,15 @@ import {
 import { Container, Description, Boxes } from "./BetterYou.style";
 
 const BetterYou = () => {
+   const [element, controls] = useScroll();
    return (
       <>
-         <Container>
+         <Container
+            variants={scrollReveal}
+            animate={controls}
+            initial="hidden"
+            ref={element}
+         >
             <Description>
                <h1>Be a better you</h1>
                <h2>Personal training in Cleveland</h2>
@@ -25,7 +33,12 @@ const BetterYou = () => {
                </p>
             </Description>
          </Container>
-         <Boxes>
+         <Boxes
+            variants={scrollReveal}
+            animate={controls}
+            initial="hidden"
+            ref={element}
+         >
             <Box title="Athletic Figure" icon={faRunning}>
                <p>
                   Whether it's through 1-on-1 personal training or virtual

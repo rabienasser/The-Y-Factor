@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
    padding: 0rem 10rem;
    @media (max-width: 1100px) {
       padding: 0 6rem;
@@ -57,7 +58,7 @@ export const Description = styled.div`
    }
 `;
 
-export const Boxes = styled.div`
+export const Boxes = styled(motion.div)`
    padding: 0 7rem;
    display: flex;
    margin-bottom: 7rem;

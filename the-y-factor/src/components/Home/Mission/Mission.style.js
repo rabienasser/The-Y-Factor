@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
    padding: 0 10rem;
    margin-bottom: 4rem;
    display: flex;
@@ -26,7 +27,7 @@ export const MissionContent = styled.div`
    }
 `;
 
-export const Image = styled.div`
+export const Image = styled(motion.div)`
    width: 50%;
    height: 100%;
    display: flex;
@@ -35,15 +36,15 @@ export const Image = styled.div`
    @media (max-width: 750px) {
       width: 70%;
    }
-
-   img {
-      object-fit: cover;
-      width: 75%;
-      height: 90%;
-   }
 `;
 
-export const Statement = styled.div`
+export const StyledImage = styled(motion.img)`
+   object-fit: cover;
+   width: 75%;
+   height: 90%;
+`;
+
+export const Statement = styled(motion.div)`
    width: 50%;
    height: 100%;
    display: flex;

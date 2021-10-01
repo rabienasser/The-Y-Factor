@@ -1,16 +1,29 @@
 import React from "react";
 import logo from "../../imgs/logo.png";
-import { navFade } from "../../animation";
+import { Link, animateScroll as scroll } from "react-scroll";
+import { fade } from "../../animation";
 import { StyledNav } from "./Navbar.style";
 
 const Navbar = () => {
    return (
-      <StyledNav variants={navFade} initial="hidden" animate="show">
+      <StyledNav variants={fade} initial="hidden" animate="show">
          <img className="logo" src={logo} alt="" />
          <ul>
-            <li>Services</li>
-            <li>Mission</li>
-            <li>Contact</li>
+            <li>
+               <Link to="services" smooth={true} offset={-70} duration={1200}>
+                  Services
+               </Link>
+            </li>
+            <li>
+               <Link to="mission" smooth={true} offset={-70} duration={1500}>
+                  Mission
+               </Link>
+            </li>
+            <li>
+               <Link to="contact" smooth={true} offset={-70} duration={1500}>
+                  Contact
+               </Link>
+            </li>
          </ul>
       </StyledNav>
    );

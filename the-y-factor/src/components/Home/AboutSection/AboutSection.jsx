@@ -1,8 +1,8 @@
 import React from "react";
 import Wave from "../../Wave";
 import person from "../../../imgs/person.jpg";
-import { Link } from "react-router-dom";
-import { Button, Hide } from "../../../styles";
+import { Link, animateScroll as scroll } from "react-scroll";
+import { Button } from "../../../styles";
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../../../animation";
 import { About, Description, Image } from "./AboutSection.style";
@@ -23,11 +23,11 @@ const AboutSection = () => {
                Premium online & individual personal
                <br /> training in the Cleveland area
             </motion.p>
-            <Link to="/contact">
-               <Button variants={fade} initial="hidden" animate="show">
+            <Button variants={fade} initial="hidden" animate="show">
+               <Link to="contact" smooth={true} offset={-70} duration={1500}>
                   Contact
-               </Button>
-            </Link>
+               </Link>
+            </Button>
          </Description>
          <Image>
             <motion.img

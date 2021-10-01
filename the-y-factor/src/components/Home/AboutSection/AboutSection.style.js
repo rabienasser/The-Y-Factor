@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const About = styled.div`
+   position: relative;
    height: 60vh;
-   padding: 0rem 10rem;
+   padding: 0rem 13rem;
    display: flex;
    align-items: center;
    background: var(--dark-blue);
@@ -65,6 +66,13 @@ export const Description = styled.div`
       }
    }
 
+   button {
+      max-width: 40%;
+      @media (max-width: 750px) {
+         margin: 0 auto;
+      }
+   }
+
    span {
       color: var(--third-color);
    }
@@ -75,7 +83,8 @@ export const Image = styled.div`
    width: 50%;
    height: 100%;
    display: flex;
-   justify-content: center;
+   /* justify-content: center; */
+   justify-content: flex-end;
 
    img {
       position: absolute;

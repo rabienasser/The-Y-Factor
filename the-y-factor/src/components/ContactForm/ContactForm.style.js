@@ -31,6 +31,11 @@ export const StyledForm = styled.form`
       }
    }
 
+   input,
+   textarea {
+      border: 1.5px solid var(--light-grey);
+   }
+
    button {
       margin: 2rem 0;
    }

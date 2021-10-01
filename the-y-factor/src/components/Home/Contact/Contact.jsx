@@ -1,6 +1,10 @@
 import React from "react";
+import trainer from "../../../imgs/trainer.jpg";
+import { useScroll } from "../../UseScroll";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { testAnim, testBox, missionFade } from "../../../animation";
+import { motion } from "framer-motion";
 import ContactForm from "../../ContactForm/ContactForm";
 import {
    Container,
@@ -8,15 +12,17 @@ import {
    ContactInfo,
    Social,
    ContactDetails,
+   StyledImage,
    Footer,
 } from "./Contact.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(fab);
 
 const Contact = () => {
+   const [element, controls] = useScroll();
    return (
       <>
-         <Container>
+         <Container id="contact">
             <Form>
                <h2>Contact Me</h2>
                <p>
@@ -28,8 +34,13 @@ const Contact = () => {
             <ContactInfo>
                <Social>
                   <h2>Social</h2>
-                  <ul>
-                     <li>
+                  <motion.ul
+                     variants={testAnim}
+                     initial="hidden"
+                     animate={controls}
+                     ref={element}
+                  >
+                     <motion.li variants={testBox}>
                         <a
                            href="https://www.facebook.com/"
                            target="_blank"
@@ -40,8 +51,8 @@ const Contact = () => {
                               className="icon"
                            />
                         </a>
-                     </li>
-                     <li>
+                     </motion.li>
+                     <motion.li variants={testBox}>
                         <a
                            href="https://www.instagram.com/"
                            target="_blank"
@@ -52,8 +63,8 @@ const Contact = () => {
                               className="icon"
                            />
                         </a>
-                     </li>
-                     <li>
+                     </motion.li>
+                     <motion.li variants={testBox}>
                         <a
                            href="https://www.youtube.com/"
                            target="_blank"
@@ -64,8 +75,8 @@ const Contact = () => {
                               className="icon"
                            />
                         </a>
-                     </li>
-                     <li>
+                     </motion.li>
+                     <motion.li variants={testBox}>
                         <a
                            href="https://www.linkedin.com/"
                            target="_blank"
@@ -76,10 +87,21 @@ const Contact = () => {
                               className="icon"
                            />
                         </a>
-                     </li>
-                  </ul>
+                     </motion.li>
+                  </motion.ul>
                </Social>
-               <ContactDetails>
+               <StyledImage>
+                  <motion.img
+                     src={trainer}
+                     alt="trainer"
+                     variants={missionFade}
+                     initial="hidden"
+                     animate={controls}
+                     ref={element}
+                  />
+               </StyledImage>
+            </ContactInfo>
+            {/* <ContactDetails>
                   <div>
                      <h2>Telephone</h2>
                      <p>(440)-476-3812</p>
@@ -88,8 +110,7 @@ const Contact = () => {
                      <h2>Email</h2>
                      <p>theyfactorllc@gmail.com</p>
                   </div>
-               </ContactDetails>
-            </ContactInfo>
+               </ContactDetails> */}
          </Container>
          <Footer />
       </>

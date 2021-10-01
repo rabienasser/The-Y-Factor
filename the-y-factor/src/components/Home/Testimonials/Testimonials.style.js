@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled.div`
    padding: 0 10rem;
@@ -25,7 +26,7 @@ export const Container = styled.div`
    }
 `;
 
-export const Boxes = styled.div`
+export const Boxes = styled(motion.div)`
    display: flex;
 
    @media (max-width: 875px) {
@@ -34,7 +35,7 @@ export const Boxes = styled.div`
    }
 `;
 
-export const Box = styled.div`
+export const Box = styled(motion.div)`
    width: 33.33%;
    padding: 40px;
    margin: 0 1rem;
