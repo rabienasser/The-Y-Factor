@@ -23,11 +23,11 @@ const AboutSection = () => {
                Premium online & individual personal
                <br /> training in the Cleveland area
             </motion.p>
-            <Button variants={fade} initial="hidden" animate="show">
-               <Link to="contact" smooth={true} offset={-70} duration={1500}>
+            <Link to="contact" smooth={true} offset={-70} duration={1500}>
+               <Button variants={fade} initial="hidden" animate="show">
                   Contact
-               </Link>
-            </Button>
+               </Button>
+            </Link>
          </Description>
          <Image>
             <motion.img

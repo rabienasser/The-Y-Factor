@@ -67,7 +67,7 @@ export const Description = styled.div`
    }
 
    button {
-      max-width: 40%;
+      max-width: 35%;
       @media (max-width: 750px) {
          margin: 0 auto;
       }

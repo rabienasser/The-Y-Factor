@@ -58,7 +58,7 @@ export const photoAnim = {
 };
 
 export const scrollReveal = {
-   hidden: { opacity: 0, scale: 1.2, transition: { duration: 0.5 } },
+   hidden: { opacity: 0, scale: 1.13, transition: { duration: 0.5 } },
    show: {
       opacity: 1,
       scale: 1,
@@ -120,6 +120,17 @@ export const testBox = {
       y: 0,
       transition: {
          duration: 0.5,
+      },
+   },
+};
+
+export const socialAnim = {
+   hidden: { opacity: 0, y: 30 },
+   show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+         duration: 0.2,
       },
    },
 };

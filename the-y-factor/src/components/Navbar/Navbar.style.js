@@ -72,6 +72,9 @@ export const StyledNav = styled(motion.nav)`
       @media (max-width: 1100px) {
          padding-left: 5rem;
       }
+      @media (max-width: 850px) {
+         padding-left: 3rem;
+      }
    }
    .logo {
       height: 4rem;

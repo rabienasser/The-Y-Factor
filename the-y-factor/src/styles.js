@@ -7,7 +7,6 @@ export const Button = styled(motion.button)`
    color: ${(props) =>
       props.grey ? "var(--dark-grey)" : "var(--third-color)"};
    text-decoration: none;
-   text-transform: uppercase;
    letter-spacing: 2px;
    background-color: transparent;
    font-size: 1rem;

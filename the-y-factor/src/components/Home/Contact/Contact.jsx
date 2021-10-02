@@ -3,7 +3,7 @@ import trainer from "../../../imgs/trainer.jpg";
 import { useScroll } from "../../UseScroll";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { testAnim, testBox, missionFade } from "../../../animation";
+import { testAnim, socialAnim, missionPhoto } from "../../../animation";
 import { motion } from "framer-motion";
 import ContactForm from "../../ContactForm/ContactForm";
 import {
@@ -11,9 +11,7 @@ import {
    Form,
    ContactInfo,
    Social,
-   ContactDetails,
    StyledImage,
-   Footer,
 } from "./Contact.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(fab);
@@ -40,7 +38,7 @@ const Contact = () => {
                      animate={controls}
                      ref={element}
                   >
-                     <motion.li variants={testBox}>
+                     <motion.li variants={socialAnim}>
                         <a
                            href="https://www.facebook.com/"
                            target="_blank"
@@ -52,7 +50,7 @@ const Contact = () => {
                            />
                         </a>
                      </motion.li>
-                     <motion.li variants={testBox}>
+                     <motion.li variants={socialAnim}>
                         <a
                            href="https://www.instagram.com/"
                            target="_blank"
@@ -64,7 +62,7 @@ const Contact = () => {
                            />
                         </a>
                      </motion.li>
-                     <motion.li variants={testBox}>
+                     <motion.li variants={socialAnim}>
                         <a
                            href="https://www.youtube.com/"
                            target="_blank"
@@ -76,7 +74,7 @@ const Contact = () => {
                            />
                         </a>
                      </motion.li>
-                     <motion.li variants={testBox}>
+                     <motion.li variants={socialAnim}>
                         <a
                            href="https://www.linkedin.com/"
                            target="_blank"
@@ -94,25 +92,14 @@ const Contact = () => {
                   <motion.img
                      src={trainer}
                      alt="trainer"
-                     variants={missionFade}
+                     variants={missionPhoto}
                      initial="hidden"
                      animate={controls}
                      ref={element}
                   />
                </StyledImage>
             </ContactInfo>
-            {/* <ContactDetails>
-                  <div>
-                     <h2>Telephone</h2>
-                     <p>(440)-476-3812</p>
-                  </div>
-                  <div>
-                     <h2>Email</h2>
-                     <p>theyfactorllc@gmail.com</p>
-                  </div>
-               </ContactDetails> */}
          </Container>
-         <Footer />
       </>
    );
 };

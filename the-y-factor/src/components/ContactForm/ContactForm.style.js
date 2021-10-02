@@ -12,7 +12,6 @@ export const StyledForm = styled.form`
 
    input {
       padding: 8px;
-      margin-bottom: 1rem;
       width: 75%;
 
       &:focus {
@@ -34,13 +33,22 @@ export const StyledForm = styled.form`
    input,
    textarea {
       border: 1.5px solid var(--light-grey);
+      margin-bottom: 0.5rem;
    }
 
    button {
       margin: 2rem 0;
    }
 
-   .error {
+   .inputError {
+      border: 2px solid red;
+
+      &:focus {
+         border: 2px solid red;
+      }
+   }
+
+   .errorMsg {
       color: red;
    }
 `;
