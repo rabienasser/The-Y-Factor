@@ -25,9 +25,9 @@ const BetterYou = () => {
                <p>
                   Whether you want to lose weight, tone up, gain lean muscle or
                   you are happy as you are but would like a healthier lifestyle,
-                  The Y Factor is the right choice for you. At the Y Factor,
-                  ​our training programmes are designed not only to help you
-                  learn correct exercise form, but also to help you improve your
+                  The Y Factor is the right choice for you. At the Y Factor, ​my
+                  training programs are designed not only to help you learn
+                  correct exercise form, but also to help you improve your
                   strength, lose weight if needed and create a quality of life
                   you can enjoy.
                </p>
@@ -42,7 +42,7 @@ const BetterYou = () => {
             <Box title="Athletic Figure" icon={faRunning}>
                <p>
                   Whether it's through 1-on-1 personal training or virtual
-                  meetings, our purpose is to get you on track to achieving the
+                  meetings, my purpose is to get you on track to achieving the
                   body you've always dreamed of.
                </p>
             </Box>
@@ -55,7 +55,7 @@ const BetterYou = () => {
             </Box>
             <Box title="Quality Of Life" icon={faCarrot}>
                <p>
-                  We seek not only to improve your body through the perfect
+                  I seek not only to improve your body through the perfect
                   exercise plan for you, but to also incorporate the right
                   nutrition to get you feeling your absolute best.
                </p>
