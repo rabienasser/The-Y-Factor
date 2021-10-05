@@ -7,8 +7,10 @@ export const Container = styled(motion.div)`
    display: flex;
    background: var(--dark-blue);
    color: var(--light-color);
-
-   @media (max-width: 1100px) {
+   @media (max-width: 1300px) {
+      padding: 0 5rem;
+   }
+   @media (max-width: 1200px) {
       padding: 0 1rem;
    }
    @media (max-width: 550px) {
@@ -20,8 +22,7 @@ export const MissionContent = styled.div`
    display: flex;
    align-items: center;
    padding: 40px;
-
-   @media (max-width: 750px) {
+   @media (max-width: 1100px) {
       flex-direction: column;
       padding: 20px;
    }
@@ -50,21 +51,20 @@ export const Statement = styled(motion.div)`
    display: flex;
    flex-direction: column;
    justify-content: center;
-   @media (max-width: 750px) {
+   @media (max-width: 1100px) {
       width: 100%;
-      text-align: center;
+      h2 {
+         text-align: center;
+      }
    }
-
    h2 {
       margin-bottom: 1rem;
       font-size: 2.7rem;
       color: var(--third-color);
-
       @media (max-width: 1150px) {
          font-size: 2rem;
       }
    }
-
    p {
       font-size: 1rem;
    }
