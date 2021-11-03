@@ -47,6 +47,11 @@ const ContactForm = () => {
       e.preventDefault();
 
       if (formValid(error, first, email, message)) {
+         // CHANGE TO JEFF'S
+         // const serviceId = "service_w4vrero";
+         // const templateId = "template_vs3b8ao";
+         // const userId = "user_qCUT3nvHFrnaW2xXo6dib";
+
          const serviceId = "service_nqexvun";
          const templateId = "template_awi0uin";
          const userId = "user_hxm9LVmlOrq85ProZYEwO";
