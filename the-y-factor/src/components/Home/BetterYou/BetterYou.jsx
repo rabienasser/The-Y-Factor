@@ -4,8 +4,8 @@ import { useScroll } from "../../UseScroll";
 import { scrollReveal } from "../../../animation";
 import {
    faRunning,
+   faBrain,
    faDumbbell,
-   faCarrot,
 } from "@fortawesome/free-solid-svg-icons";
 import { Container, Description, Boxes } from "./BetterYou.style";
 
@@ -20,16 +20,15 @@ const BetterYou = () => {
             ref={element}
          >
             <Description>
-               <h1>Be a better you</h1>
-               <h2>Personal training in Cleveland</h2>
+               <h1>Philosophy</h1>
+               <h2>MIND/BODY/MOVE</h2>
                <p>
-                  Whether you want to lose weight, tone up, gain lean muscle or
-                  you are happy as you are but would like a healthier lifestyle,
-                  The Y Factor is the right choice for you. At the Y Factor, ​my
-                  training programs are designed not only to help you learn
-                  correct exercise form, but also to help you improve your
-                  strength, lose weight if needed and create a quality of life
-                  you can enjoy.
+                  Enhancing an individual’s understanding of their bodies and
+                  creating a heightened awareness of one’s movement patterns
+                  leads to the overall goal...MAKING YOU HARDER TO BREAK! By
+                  combining mental awareness and building full body strength +
+                  endurance then mobilizing it through multiple movement
+                  patterns on all planes of exercise this goal will be achieved.
                </p>
             </Description>
          </Container>
@@ -39,25 +38,16 @@ const BetterYou = () => {
             initial="hidden"
             ref={element}
          >
-            <Box title="Athletic Figure" icon={faRunning}>
-               <p>
-                  Whether it's through 1-on-1 personal training or virtual
-                  meetings, my purpose is to get you on track to achieving the
-                  body you've always dreamed of.
-               </p>
+            <Box title="Mind" icon={faBrain}>
+               <p>Mental Awareness/Focus</p>
             </Box>
-            <Box title="Confidence Boost" icon={faDumbbell}>
-               <p>
-                  We don't only focus on the image in the mirror, but also how
-                  you feel in your skin. Achieving milestones with your body
-                  will transfer into your daily life as increased confidence.
-               </p>
+            <Box title="Body" icon={faDumbbell}>
+               <p>Full Body Strength/Endurance</p>
             </Box>
-            <Box title="Quality Of Life" icon={faCarrot}>
+            <Box title="Move" icon={faRunning}>
                <p>
-                  I seek not only to improve your body through the perfect
-                  exercise plan for you, but to also incorporate the right
-                  nutrition to get you feeling your absolute best.
+                  Mobility/Stabilization/Balance exercises will increase control
+                  on all planes of motion
                </p>
             </Box>
          </Boxes>

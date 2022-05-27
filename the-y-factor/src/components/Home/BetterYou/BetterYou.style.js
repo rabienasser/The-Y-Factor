@@ -52,6 +52,7 @@ export const Description = styled.div`
 
    p {
       margin-bottom: 4rem;
+      text-align: center;
       @media (max-width: 850px) {
          margin-bottom: 2rem;
       }

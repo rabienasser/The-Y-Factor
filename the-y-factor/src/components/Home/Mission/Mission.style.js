@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 export const Container = styled(motion.div)`
    padding: 0 10rem;
    margin-bottom: 4rem;
-   display: flex;
-   background: var(--dark-blue);
+   background: var(--third-color);
    color: var(--light-color);
    @media (max-width: 1300px) {
       padding: 0 5rem;
@@ -18,38 +17,13 @@ export const Container = styled(motion.div)`
    }
 `;
 
-export const MissionContent = styled.div`
-   display: flex;
-   align-items: center;
-   padding: 40px;
-   @media (max-width: 1100px) {
-      flex-direction: column;
-      padding: 20px;
-   }
-`;
-
-export const Image = styled(motion.div)`
-   width: 50%;
-   height: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   @media (max-width: 750px) {
-      width: 70%;
-   }
-`;
-
-export const StyledImage = styled(motion.img)`
-   object-fit: cover;
-   width: 75%;
-   height: 90%;
-`;
-
 export const Statement = styled(motion.div)`
-   width: 50%;
-   height: 100%;
+   padding: 1.5rem;
+   width: 60%;
+   margin: auto;
    display: flex;
    flex-direction: column;
+   align-items: center;
    justify-content: center;
    @media (max-width: 1100px) {
       width: 100%;
@@ -60,12 +34,13 @@ export const Statement = styled(motion.div)`
    h2 {
       margin-bottom: 1rem;
       font-size: 2.7rem;
-      color: var(--third-color);
+      color: var(--light-color);
       @media (max-width: 1150px) {
          font-size: 2rem;
       }
    }
    p {
       font-size: 1rem;
+      text-align: center;
    }
 `;

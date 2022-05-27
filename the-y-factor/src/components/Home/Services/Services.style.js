@@ -20,7 +20,7 @@ export const Description = styled(motion.div)`
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   background: var(--third-color);
+   background: var(--dark-blue);
    color: var(--light-color);
    margin-bottom: 5rem;
    padding: 30px 0;

@@ -14,14 +14,14 @@ const AboutSection = () => {
          <Description>
             <motion.h1 variants={titleAnim} initial="hidden" animate="show">
                <span>
-                  THIS IS JUST A TEST (take your fitness)
+                  The Y Factor
                   <br />
                </span>
-               To The Next Level
+               Health & Fitness
             </motion.h1>
             <motion.p variants={fade} initial="hidden" animate="show">
-               Premium online & individual personal
-               <br /> training in the Cleveland area
+               Take Your Fitness To The Next Level
+               <br /> And Find Your Y
             </motion.p>
             <Link to="contact" smooth={true} offset={-70} duration={1500}>
                <Button variants={fade} initial="hidden" animate="show">
