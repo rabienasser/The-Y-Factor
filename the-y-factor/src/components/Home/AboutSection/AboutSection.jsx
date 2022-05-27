@@ -14,7 +14,7 @@ const AboutSection = () => {
          <Description>
             <motion.h1 variants={titleAnim} initial="hidden" animate="show">
                <span>
-                  Take Your Fitness
+                  THIS IS JUST A TEST
                   <br />
                </span>
                To The Next Level
