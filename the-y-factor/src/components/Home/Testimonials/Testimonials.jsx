@@ -6,7 +6,7 @@ import { Container, Boxes, Box } from "./Testimonials.style";
 const Testimonials = () => {
    const [element, controls] = useScroll();
    return (
-      <Container>
+      <Container id="testimonials">
          <h2>Clients on Their Journeys - 5 testimonials</h2>
          <Boxes
             variants={testAnim}

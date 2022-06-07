@@ -1,21 +1,24 @@
 import React from "react";
 import logo from "../../../imgs/logo.png";
+import { useLocation } from "react-router-dom";
 import { useScroll } from "../../UseScroll";
 import { scrollReveal } from "../../../animation";
 import { StyledFooter, FooterLogo } from "./Footer.style";
 
 const Footer = () => {
+   const { pathname } = useLocation();
    const [element, controls] = useScroll();
    return (
       <StyledFooter
-         variants={scrollReveal}
+         variants={pathname === "/" && scrollReveal}
          initial="hidden"
          animate={controls}
          ref={element}
       >
          <div>
-            <h2>Telephone</h2>
-            <p>(440)-476-3812</p>
+            <h2>
+               *FREE* <br /> Consultation
+            </h2>
          </div>
          <FooterLogo>
             <div>

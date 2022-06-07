@@ -20,7 +20,13 @@ const BetterYou = () => {
             ref={element}
          >
             <Description>
-               <h1>Philosophy</h1>
+               <h1>Philosophy + Mission Statement</h1>
+               <p>
+                  My mission is to <span>safely</span> and{" "}
+                  <span>effectively</span> guide individuals on their health and
+                  fitness journeys to find their Y. We will accomplish this
+                  through my 3 pillars of:
+               </p>
                <h2>MIND/BODY/MOVE</h2>
                <p>
                   Enhancing an individual’s understanding of their bodies and

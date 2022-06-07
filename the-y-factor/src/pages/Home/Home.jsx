@@ -16,7 +16,6 @@ const Home = () => {
          <IntroAnim />
          <AboutSection />
          <BetterYou />
-         <Mission />
          <Services />
          <Testimonials />
          <Contact />

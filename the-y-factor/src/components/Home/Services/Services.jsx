@@ -1,6 +1,8 @@
 import React from "react";
 import Toggle from "../../Toggle";
+import { Link } from "react-router-dom";
 import { useScroll } from "../../UseScroll";
+import { Button } from "../../../styles";
 import { scrollReveal } from "../../../animation";
 import { AnimateSharedLayout } from "framer-motion";
 import { Container, Description } from "./Services.style";
@@ -23,6 +25,10 @@ const Services = () => {
                   develop and implement an exercise program tailored to meet the
                   goals of every individual.
                </p>
+
+               <Link to="/sample-workouts">
+                  <Button>View Sample Workouts</Button>
+               </Link>
             </div>
          </Description>
          <Container

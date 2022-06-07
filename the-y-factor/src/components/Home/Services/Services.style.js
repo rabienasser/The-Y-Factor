@@ -44,5 +44,9 @@ export const Description = styled(motion.div)`
       p {
          font-size: 1rem;
       }
+
+      p:first-of-type {
+         margin-bottom: 2rem;
+      }
    }
 `;
