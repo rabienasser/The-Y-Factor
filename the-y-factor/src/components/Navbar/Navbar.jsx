@@ -17,28 +17,36 @@ const Navbar = () => {
          <RouterLink to="/">
             <img className="logo" src={logo} alt="The Y Factor" />
          </RouterLink>
-         <ul>
-            <li>
-               <Link to="services" smooth={true} offset={-70} duration={1200}>
-                  Services
-               </Link>
-            </li>
-            <li>
-               <Link
-                  to="testimonials"
-                  smooth={true}
-                  offset={-70}
-                  duration={1500}
-               >
-                  Testimonials
-               </Link>
-            </li>
-            <li>
-               <Link to="contact" smooth={true} offset={-70} duration={1500}>
-                  Contact
-               </Link>
-            </li>
-         </ul>
+
+         {pathname === "/" && (
+            <ul>
+               <li>
+                  <Link
+                     to="services"
+                     smooth={true}
+                     offset={-70}
+                     duration={1200}
+                  >
+                     Services
+                  </Link>
+               </li>
+               <li>
+                  <Link
+                     to="testimonials"
+                     smooth={true}
+                     offset={-70}
+                     duration={1500}
+                  >
+                     Testimonials
+                  </Link>
+               </li>
+               <li>
+                  <Link to="contact" smooth={true} offset={-70} duration={1500}>
+                     Contact
+                  </Link>
+               </li>
+            </ul>
+         )}
       </StyledNav>
    );
 };
