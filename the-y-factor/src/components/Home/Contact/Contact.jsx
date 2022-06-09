@@ -1,5 +1,5 @@
 import React from "react";
-import trainer from "../../../imgs/trainer.jpg";
+import jeff_1 from "../../../imgs/jeff_1.jpg";
 import { useScroll } from "../../UseScroll";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -90,7 +90,7 @@ const Contact = () => {
                </Social>
                <StyledImage>
                   <motion.img
-                     src={trainer}
+                     src={jeff_1}
                      alt="trainer"
                      variants={missionPhoto}
                      initial="hidden"

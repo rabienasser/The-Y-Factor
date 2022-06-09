@@ -9,7 +9,7 @@ export const About = styled.div`
    background: var(--dark-blue);
    margin-bottom: 9rem;
 
-   @media (max-width: 1100px) {
+   @media (max-width: 1250px) {
       padding: 0 6rem;
    }
    @media (max-width: 850px) {
@@ -83,18 +83,22 @@ export const Image = styled.div`
    width: 50%;
    height: 100%;
    display: flex;
-   justify-content: flex-end;
+   justify-content: center;
 
    img {
       position: absolute;
-      bottom: -20%;
+      bottom: -10%;
       object-fit: cover;
-      max-height: 100%;
-      max-width: 100%;
+      height: 90%;
+
+      @media (max-width: 1250px) {
+         height: auto;
+         position: static;
+         margin: auto;
+      }
 
       @media (max-width: 750px) {
          position: static;
-         width: 100%;
       }
    }
 `;

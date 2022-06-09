@@ -1,6 +1,6 @@
 import React from "react";
 import Wave from "../../Wave";
-import person from "../../../imgs/person.jpg";
+import jeff_2 from "../../../imgs/jeff_2.jpg";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Button } from "../../../styles";
 import { motion } from "framer-motion";
@@ -34,7 +34,7 @@ const AboutSection = () => {
                variants={photoAnim}
                initial="hidden"
                animate="show"
-               src={person}
+               src={jeff_2}
                alt="Photo"
             />
          </Image>
