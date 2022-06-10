@@ -1,8 +1,9 @@
 import React from "react";
 import Toggle from "../../Toggle";
+import pdf from "../../../events/trail-running_1.pdf";
 import { Link } from "react-router-dom";
 import { useScroll } from "../../UseScroll";
-import { Button } from "../../../styles";
+import { Button, AltButton } from "../../../styles";
 import { scrollReveal } from "../../../animation";
 import { AnimateSharedLayout } from "framer-motion";
 import { Container, Description } from "./Services.style";
@@ -26,9 +27,14 @@ const Services = () => {
                   goals of every individual.
                </p>
 
-               <Link to="/sample-workouts">
-                  <Button>View Sample Workouts</Button>
-               </Link>
+               <div className="buttons">
+                  <Link to="/sample-workouts">
+                     <Button>View Sample Workouts</Button>
+                  </Link>
+                  <a href={pdf} target="_blank" rel="noreferrer">
+                     <AltButton right>View Upcoming Events</AltButton>
+                  </a>
+               </div>
             </div>
          </Description>
          <Container

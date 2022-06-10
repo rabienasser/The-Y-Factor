@@ -9,7 +9,16 @@ const SampleWorkouts = () => {
    return (
       <div>
          <Navbar />
-         <Box sx={{ px: "10rem" }}>
+         <Box
+            sx={{
+               px: {
+                  xs: "0",
+                  sm: "2rem",
+                  md: "5rem",
+                  lg: "10rem",
+               },
+            }}
+         >
             <ExerciseTable />
             <ExerciseAccordion />
          </Box>

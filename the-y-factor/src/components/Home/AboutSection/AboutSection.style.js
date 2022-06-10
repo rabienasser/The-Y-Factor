@@ -21,9 +21,6 @@ export const About = styled.div`
       padding: 3rem 0;
       margin-bottom: 15rem;
    }
-   @media (max-width: 550px) {
-      margin-bottom: 12rem;
-   }
    @media (device-width: 375px) and (device-height: 812px) {
       margin-bottom: 5rem;
    }

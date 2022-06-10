@@ -47,6 +47,25 @@ export const Description = styled(motion.div)`
 
       p:first-of-type {
          margin-bottom: 2rem;
+         @media (max-width: 550px) {
+            margin-bottom: 0;
+         }
+      }
+
+      .buttons {
+         display: flex;
+         width: 100%;
+
+         @media (max-width: 550px) {
+            flex-direction: column;
+         }
+
+         a {
+            @media (max-width: 550px) {
+               margin: 5px 0;
+               text-align: center;
+            }
+         }
       }
    }
 `;

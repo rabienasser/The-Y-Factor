@@ -40,7 +40,7 @@ const Contact = () => {
                   >
                      <motion.li variants={socialAnim}>
                         <a
-                           href="https://www.facebook.com/"
+                           href="https://www.facebook.com/jeffrey.yannarell"
                            target="_blank"
                            rel="noreferrer"
                         >
@@ -52,7 +52,7 @@ const Contact = () => {
                      </motion.li>
                      <motion.li variants={socialAnim}>
                         <a
-                           href="https://www.instagram.com/"
+                           href="https://www.instagram.com/jeffreydoo23/"
                            target="_blank"
                            rel="noreferrer"
                         >
@@ -70,18 +70,6 @@ const Contact = () => {
                         >
                            <FontAwesomeIcon
                               icon={["fab", "youtube"]}
-                              className="icon"
-                           />
-                        </a>
-                     </motion.li>
-                     <motion.li variants={socialAnim}>
-                        <a
-                           href="https://www.linkedin.com/"
-                           target="_blank"
-                           rel="noreferrer"
-                        >
-                           <FontAwesomeIcon
-                              icon={["fab", "linkedin"]}
                               className="icon"
                            />
                         </a>
