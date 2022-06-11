@@ -25,7 +25,7 @@ const BetterYou = () => {
                   My mission is to <span>safely</span> and{" "}
                   <span>effectively</span> guide individuals on their health and
                   fitness journeys to find their Y. We will accomplish this
-                  through my 3 pillars of:
+                  through my 3 pillars:
                </p>
                <h2>MIND/BODY/MOVE</h2>
                <p>

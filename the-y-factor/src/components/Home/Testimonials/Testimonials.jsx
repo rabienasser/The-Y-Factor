@@ -7,7 +7,7 @@ const Testimonials = () => {
    const [element, controls] = useScroll();
    return (
       <Container id="testimonials">
-         <h2>Clients on Their Journeys - 5 testimonials</h2>
+         <h2>Clients on Their Journeys</h2>
          <Boxes
             variants={testAnim}
             initial="hidden"
@@ -28,7 +28,7 @@ const Testimonials = () => {
             <Box variants={testBox}>
                <p>
                   "I have trained with Jeff for over 5 years an have been
-                  impressed with his ability to individualize mu workout to meet
+                  impressed with his ability to individualize my workout to meet
                   my goals and adapt it to changes such as recovery to illness
                   or injury. His workout plan is flexible and it covers major
                   areas from core strength and flexibility to balance and
@@ -59,7 +59,7 @@ const Testimonials = () => {
             </Box>
             <Box variants={testBox}>
                <p>
-                  "Jeff is very knowledgeable and personable professional
+                  "Jeff is very knowledgeable, personable and professional
                   trainer. He really knows how to motivate me during my training
                   sessions to push myself to achieve the best outcome. Under
                   Jeff’s tutelage, in 6 months I have gone from a 260lbs
