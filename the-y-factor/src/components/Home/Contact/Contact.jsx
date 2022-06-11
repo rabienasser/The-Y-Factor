@@ -64,7 +64,7 @@ const Contact = () => {
                      </motion.li>
                      <motion.li variants={socialAnim}>
                         <a
-                           href="https://www.youtube.com/"
+                           href="https://www.youtube.com/channel/UC9aeIPcGu5bSQ6gK7xnngEQ"
                            target="_blank"
                            rel="noreferrer"
                         >
