@@ -1,5 +1,5 @@
 import React from "react";
-import trainer from "../../../imgs/trainer.jpg";
+import jeff_1 from "../../../imgs/jeff_1.jpg";
 import { useScroll } from "../../UseScroll";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -40,7 +40,7 @@ const Contact = () => {
                   >
                      <motion.li variants={socialAnim}>
                         <a
-                           href="https://www.facebook.com/"
+                           href="https://www.facebook.com/jeffrey.yannarell"
                            target="_blank"
                            rel="noreferrer"
                         >
@@ -52,7 +52,7 @@ const Contact = () => {
                      </motion.li>
                      <motion.li variants={socialAnim}>
                         <a
-                           href="https://www.instagram.com/"
+                           href="https://www.instagram.com/jeffreydoo23/"
                            target="_blank"
                            rel="noreferrer"
                         >
@@ -74,23 +74,11 @@ const Contact = () => {
                            />
                         </a>
                      </motion.li>
-                     <motion.li variants={socialAnim}>
-                        <a
-                           href="https://www.linkedin.com/"
-                           target="_blank"
-                           rel="noreferrer"
-                        >
-                           <FontAwesomeIcon
-                              icon={["fab", "linkedin"]}
-                              className="icon"
-                           />
-                        </a>
-                     </motion.li>
                   </motion.ul>
                </Social>
                <StyledImage>
                   <motion.img
-                     src={trainer}
+                     src={jeff_1}
                      alt="trainer"
                      variants={missionPhoto}
                      initial="hidden"

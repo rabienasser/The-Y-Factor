@@ -18,7 +18,6 @@ const Home = () => {
          <BetterYou />
          <Services />
          <Testimonials />
-         <Mission />
          <Contact />
          <Footer />
       </div>

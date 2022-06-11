@@ -20,7 +20,7 @@ export const Description = styled.div`
    align-items: center;
    justify-content: center;
    margin: 0 auto;
-   width: 65%;
+   width: 85%;
 
    @media (max-width: 1100px) {
       width: 85%;
@@ -29,6 +29,7 @@ export const Description = styled.div`
    h1 {
       font-size: 3.5rem;
       margin-bottom: 1.5rem;
+      text-align: center;
       @media (max-width: 850px) {
          font-size: 3rem;
       }
@@ -51,10 +52,22 @@ export const Description = styled.div`
    }
 
    p {
+      text-align: center;
+      margin-bottom: 1rem;
+   }
+
+   p:last-child {
       margin-bottom: 4rem;
       @media (max-width: 850px) {
          margin-bottom: 2rem;
       }
+   }
+
+   span {
+      font-style: italic;
+      font-weight: bold;
+      text-decoration: underline;
+      color: var(--third-color);
    }
 `;
 

@@ -2,16 +2,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Container = styled.div`
-   padding: 0 10rem;
-   margin-bottom: 7rem;
-
-   @media (max-width: 1100px) {
-      padding: 1rem;
-   }
-
-   @media (max-width: 850px) {
-      margin-bottom: 3rem;
-   }
+   padding: 0 1rem;
+   margin-bottom: 3rem;
 
    @media (max-width: 550px) {
       margin-bottom: 1rem;
@@ -28,22 +20,24 @@ export const Container = styled.div`
 
 export const Boxes = styled(motion.div)`
    display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
 
-   @media (max-width: 875px) {
+   @media (max-width: 1025px) {
       flex-direction: column;
       align-items: center;
    }
 `;
 
 export const Box = styled(motion.div)`
-   width: 33.33%;
+   width: 30%;
    padding: 40px;
-   margin: 0 1rem;
+   margin: 1rem;
    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
       rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
       rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
-   @media (max-width: 875px) {
+   @media (max-width: 1025px) {
       width: 75%;
       margin: 1.5rem 0;
    }
@@ -51,7 +45,7 @@ export const Box = styled(motion.div)`
    p {
       font-size: 1rem;
       font-style: italic;
-      margin-bottom: 1rem;
+      margin: auto;
    }
 
    h3 {

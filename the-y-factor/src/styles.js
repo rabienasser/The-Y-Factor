@@ -19,6 +19,9 @@ export const Button = styled(motion.button)`
       padding: 10px 15px;
       font-size: 0.8rem;
    }
+   @media (max-width: 550px) {
+      width: 75%;
+   }
 
    &:hover {
       background: ${(props) =>
@@ -70,4 +73,38 @@ export const Button = styled(motion.button)`
 
 export const Hide = styled.div`
    overflow: hidden;
+`;
+
+export const AltButton = styled(Button)`
+   &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid
+         ${(props) => (props.grey ? "var(--dark-grey)" : "var(--third-color)")};
+      border-right: 2px solid
+         ${(props) => (props.grey ? "var(--dark-grey)" : "var(--third-color)")};
+      border-left: none;
+      transition: 0.5s;
+   }
+
+   &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: auto;
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid
+         ${(props) => (props.grey ? "var(--dark-grey)" : "var(--third-color)")};
+      border-left: 2px solid
+         ${(props) => (props.grey ? "var(--dark-grey)" : "var(--third-color)")};
+      border-right: none;
+      transition: 0.5s;
+   }
 `;

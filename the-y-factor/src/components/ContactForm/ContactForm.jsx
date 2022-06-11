@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { Button } from "../../styles";
 import { StyledForm, Section, Name } from "./ContactForm.style";
@@ -47,14 +47,9 @@ const ContactForm = () => {
       e.preventDefault();
 
       if (formValid(error, first, email, message)) {
-         // CHANGE TO JEFF'S
-         // const serviceId = "service_w4vrero";
-         // const templateId = "template_vs3b8ao";
-         // const userId = "user_qCUT3nvHFrnaW2xXo6dib";
-
-         const serviceId = "service_nqexvun";
-         const templateId = "template_awi0uin";
-         const userId = "user_hxm9LVmlOrq85ProZYEwO";
+         const serviceId = "service_w4vrero";
+         const templateId = "template_vs3b8ao";
+         const userId = "user_qCUT3nvHFrnaW2xXo6dib";
          const templateParams = {
             first,
             last,
@@ -177,9 +172,7 @@ const ContactForm = () => {
             Submit
          </Button>
          {emailSent && !generalError && (
-            <span>
-               Thank you for your message, I will be in touch in no time!
-            </span>
+            <span>Thank you for your message, I will be in touch soon!</span>
          )}
          {generalError && (
             <span className="errorMsg">

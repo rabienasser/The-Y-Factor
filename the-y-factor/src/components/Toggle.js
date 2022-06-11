@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 function Toggle({ children, title }) {
-   const [toggle, setToggle] = useState(false);
+   const [toggle, setToggle] = useState(true);
    return (
       <Section layout onClick={() => setToggle(!toggle)}>
          <Title layout>{title}</Title>
@@ -26,11 +26,8 @@ const Title = styled(motion.h2)`
    margin-bottom: 2rem;
    transition: all 0.3s ease;
    padding: 0 0.75rem;
-
-   &:hover {
-      color: var(--third-color);
-      transform: scale(1.01);
-   }
+   color: var(--third-color);
+   font-weight: bold;
 `;
 
 export default Toggle;

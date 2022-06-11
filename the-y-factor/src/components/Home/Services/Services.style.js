@@ -20,7 +20,7 @@ export const Description = styled(motion.div)`
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   background: var(--third-color);
+   background: var(--dark-blue);
    color: var(--light-color);
    margin-bottom: 5rem;
    padding: 30px 0;
@@ -43,6 +43,29 @@ export const Description = styled(motion.div)`
 
       p {
          font-size: 1rem;
+      }
+
+      p:first-of-type {
+         margin-bottom: 2rem;
+         @media (max-width: 550px) {
+            margin-bottom: 0;
+         }
+      }
+
+      .buttons {
+         display: flex;
+         width: 100%;
+
+         @media (max-width: 550px) {
+            flex-direction: column;
+         }
+
+         a {
+            @media (max-width: 550px) {
+               margin: 5px 0;
+               text-align: center;
+            }
+         }
       }
    }
 `;
